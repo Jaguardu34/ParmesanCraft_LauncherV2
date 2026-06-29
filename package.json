@@ -1,10 +1,13 @@
 {
-  "name": "eml-template",
-  "productName": "EML Template",
-  "author": "GoldFrite",
-  "description": "Template launcher with EML Lib",
+  "name": "parmesan_craft_launcher",
+  "productName": "ParmesanCraft Launcher",
+  "author": {
+    "name": "Jaguardu34",
+    "email": "jaguardu3434@gmail.com"
+  },
+  "description": "Parmesancraft Launcher with EML Lib",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist-electron/main.js",
   "scripts": {
@@ -12,11 +15,12 @@
     "build": "tsc && vite build",
     "release:win": "npm run build && electron-builder --win",
     "release:mac": "npm run build && electron-builder --mac",
-    "release:lin": "npm run build && electron-builder --linux"
+    "release:lin": "npm run build && electron-builder --linux",
+    "release:all": "npm run release:win && npm run release:lin"
   },
   "build": {
-    "appId": "com.eml.template",
-    "productName": "EML Template",
+    "appId": "com.jaguardu34.pcl",
+    "productName": "ParmesanCraft Launcher",
     "copyright": "Copyright © 2026 EML",
     "directories": {
       "output": "release",
@@ -39,13 +43,15 @@
       "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
     ],
     "publish": {
-      "provider": "generic",
-      "url": "https://emlproject.pages.dev/"
+          "provider": "github",
+          "owner": "Jaguardu34",
+          "repo": "ParmesanCraft_LauncherV2"
+        }
     },
     "win": {
       "target": "nsis",
       "icon": "build/icon.ico",
-      "legalTrademarks": "EML Project"
+      "legalTrademarks": "ParmesanCraft Launcher"
     },
     "nsis": {
       "oneClick": false,
@@ -53,10 +59,10 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "EML Template",
+      "shortcutName": "ParmesanCraft Launcher",
       "deleteAppDataOnUninstall": true,
       "artifactName": "${productName}-Setup-${version}.${ext}",
-      "uninstallDisplayName": "EML Template"
+      "uninstallDisplayName": "ParmesanCraft Launcher"
     },
     "mac": {
       "target": [
@@ -97,12 +103,11 @@
     "linux": {
       "target": [
         "AppImage",
-        "deb",
-        "rpm"
+        "deb"
       ],
       "icon": "build/icon.png",
       "category": "Game",
-      "description": "Template launcher with EML Lib",
+      "description": "ParmesanCraft Launcher with EML Lib",
       "artifactName": "${productName}-${version}.${ext}"
     }
   },

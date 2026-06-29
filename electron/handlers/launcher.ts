@@ -13,11 +13,14 @@ export function registerLauncherHandlers(mainWindow: BrowserWindow) {
 
     const launcher = new Launcher({
       url: ADMINTOOL_URL,
-      root: 'goldfrite',
+      root: 'parmesancraft_launcher',
       profile: { slug: profileSlug },
       account: account,
       cleaning: {
         enabled: false
+      },
+      minecraft: {
+        args: ['--quickPlayMultiplayer', 'play.parmesancraft.fr:25566']
       },
       java: java,
       memory: {
@@ -153,4 +156,3 @@ export function registerLauncherHandlers(mainWindow: BrowserWindow) {
     }
   })
 }
-

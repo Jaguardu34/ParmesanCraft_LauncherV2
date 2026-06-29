@@ -12,7 +12,7 @@ import logger from 'electron-log/main'
 import { registerProfilesHandlers } from './handlers/profiles'
 import { registerSkinHandlers } from './handlers/skin'
 
-const APP_TITLE = 'EML Template'
+const APP_TITLE = 'ParmesanCraft'
 const BG_COLOR = '#121212'
 
 let mainWindow: BrowserWindow | null = null
@@ -99,7 +99,15 @@ function configureAppMenu() {
 
     {
       label: 'Edit',
-      submenu: [{ role: 'undo' }, { role: 'redo' }, { type: 'separator' }, { role: 'cut' }, { role: 'copy' }, { role: 'paste' }, { role: 'selectAll' }]
+      submenu: [
+        { role: 'undo' },
+        { role: 'redo' },
+        { type: 'separator' },
+        { role: 'cut' },
+        { role: 'copy' },
+        { role: 'paste' },
+        { role: 'selectAll' }
+      ]
     },
 
     {
@@ -134,4 +142,3 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   app.quit()
 })
-
