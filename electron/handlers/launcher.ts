@@ -18,7 +18,21 @@ export function registerLauncherHandlers(mainWindow: BrowserWindow) {
       account: account,
       cleaning: {
         enabled: true,
-        ignored: ['crash-reports/', 'logs/', 'resourcepacks/', 'resources/', 'saves/', 'shaderpacks/', 'options.txt', 'optionsof.txt']
+        ignored: [
+          'crash-reports/',
+          'logs/',
+          'resourcepacks/',
+          'resources/',
+          'saves/',
+          'shaderpacks/',
+          'options.txt',
+          'optionsof.txt',
+          'Distant_Horizons_server_data/',
+          'journeymap/',
+          'midi_files/',
+          'emotes',
+          'dynamic-resource-pack-cache'
+        ]
       },
       minecraft: {
         args: ['--quickPlayMultiplayer', 'play.parmesancraft.fr:25566']
