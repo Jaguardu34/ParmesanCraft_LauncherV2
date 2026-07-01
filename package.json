@@ -16,7 +16,8 @@
     "release:win": "npm run build && electron-builder --win",
     "release:mac": "npm run build && electron-builder --mac",
     "release:lin": "npm run build && electron-builder --linux",
-    "release:all": "npm run release:win && npm run release:lin"
+    "release:all": "npm run release:win && npm run release:lin",
+    "push-release": "bash push-release.sh"
   },
   "build": {
     "appId": "com.jaguardu34.pcl",

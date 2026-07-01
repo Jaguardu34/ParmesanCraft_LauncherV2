@@ -17,7 +17,8 @@ export function registerLauncherHandlers(mainWindow: BrowserWindow) {
       profile: { slug: profileSlug },
       account: account,
       cleaning: {
-        enabled: false
+        enabled: true,
+        ignored: ['crash-reports/', 'logs/', 'resourcepacks/', 'resources/', 'saves/', 'shaderpacks/', 'options.txt', 'optionsof.txt']
       },
       minecraft: {
         args: ['--quickPlayMultiplayer', 'play.parmesancraft.fr:25566']
