@@ -7,7 +7,7 @@
   },
   "description": "Parmesancraft Launcher with EML Lib",
   "private": true,
-  "version": "1.1.1",
+  "version": "1.2.0",
   "license": "MIT",
   "main": "dist-electron/main.js",
   "scripts": {

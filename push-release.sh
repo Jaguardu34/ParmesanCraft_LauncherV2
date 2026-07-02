@@ -6,10 +6,19 @@ TAG="v$VERSION"
 
 echo "Version détectée : $VERSION"
 
+# --- MODIFICATION ICI ---
+# Vérifie si un argument a été passé au script
+if [ -z "$1" ]; then
+    COMMIT_MSG="Bump version to $VERSION"
+else
+    COMMIT_MSG="Bump version to $VERSION - $1"
+fi
+# ------------------------
+
 # 2. Ajouter et commit les fichiers modifiés
 git add .
 echo "Commit des changements..."
-git commit -m "Bump version to $VERSION"
+git commit -m "$COMMIT_MSG"
 
 # 3. Pousser la branche principale
 echo "Push vers la branche main..."
